@@ -1,3 +1,9 @@
+let sizes = [[4,3], [8,6], [12,9], [16,12], [20,15], [24,18], [28, 21], [32, 24], [36, 27], [40, 30]]
+// Array sizes is for a future update that will make the grid into a 4:3 aspect ratio
+// by using gridSize as an index of sizes
+// eg sizes[gridSize]
+// passed into genGrid as two arguments for width and height
+
 let gridSize = document.getElementById("gridSize").innerHTML
 let maxGridSize = 25
 let minGridSize = 5
@@ -36,12 +42,12 @@ function genGrid(gridSize){
       for(var x = 1; x <= gridSize; x++){ 
           var cell = document.createElement("div"); 
           cell.id = "pixel"; 
-          cell.innerText = (i * gridSize) + x; // Drops numbers on each "pixel"
+          //cell.innerText = (i * gridSize) + x; // Drops numbers on each "pixel" for testing
           row.appendChild(cell); 
       } 
       e.appendChild(row); 
     } 
-    document.getElementById("body").innerText = e.innerHTML;
+    //document.getElementById("body").innerText = e.innerHTML;
 };
 
 
@@ -61,6 +67,13 @@ Adding feature to increase and decrease grid-size using buttons
 
 Opening 24/10/22
 Building function deleteGrid() that removes existing grid when generating a new grid.
+
+Function genGrid creates a new <div> underneath all of the existing HTML
+This is problematic for the layout, and should be edited to make changes to an existing div
+
+According to Wikipedia, Etchasketch has an aspect ratio of 4:3, 
+so the adjustment
+ should follow this ratio
 */
 
 
