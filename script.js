@@ -1,6 +1,7 @@
 let gridSize = document.getElementById("gridSize").innerHTML
 let maxGridSize = 25
 let minGridSize = 5
+let grid = document.getElementById("grid")
 console.log(`Starting grid size is ${gridSize}`)
 
 function increaseGrid() {
@@ -21,24 +22,14 @@ function decreaseGrid() {
 
 function deleteGrid() {
   console.log(`Attempting to delete previous grid of size ${gridSize}`)
-  const element = document.getElementById("row");
-  //element.remove();
+  grid.replaceChildren(); //replaceChildren with Nothing, because function is called inside genGrid
 };
-
-
-
 
 // function takes a number as an argument and returns a square of "pixels"
 function genGrid(gridSize){ 
   console.log(`Generating grid of size ${gridSize}`)
-  // Here needs to be something that removes any grid that currently exists
-  // cell.id = pixel
-  // Consider deleting all "pixels" before creating any.
-
-  // Delete Grid seems to delete everything even the new grid created after it
-  // To combat this, each new grid will be issued a unique
-  deleteGrid()
-    var e = document.body; // whatever you want to append the rows to: 
+  deleteGrid();
+    var e = document.body.appendChild(grid); // Appends the rows to a <div> called grid: 
     for(var i = 0; i < gridSize; i++){ 
       var row = document.createElement("div"); 
       row.id = "row"; 
@@ -50,7 +41,7 @@ function genGrid(gridSize){
       } 
       e.appendChild(row); 
     } 
-    //document.getElementById("body").innerText = e.innerHTML;
+    document.getElementById("body").innerText = e.innerHTML;
 };
 
 
