@@ -1,0 +1,30 @@
+#outerBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#row {
+    display: flex;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;   
+}
+
+
+#pixel {
+    height: 30px;
+    width: 30px;
+    max-width: 20;
+    border: 1px solid rgb(180, 180, 180);
+    background-color: rgb(223, 223, 223);
+    text-align: center;
+    transition: ease-out
+    
+}
+
+#pixel:hover {
+    background-color: rgb(0, 114, 25);
+    transition: ease-out;
+}
+
