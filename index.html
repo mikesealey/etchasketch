@@ -15,22 +15,26 @@
         <h1>Etch A Sketch</h1>
         <h2>SCREEN</h2>
     </div>
-    <div id="grid"></div>
-    <h3></h3>
-    <div id="controls">
-        <button id="decreaseGrid" onclick="decreaseGrid()">-</button>
-        <div id="gridSize">12</div>
-        <button id="increaseGrid" onclick="increaseGrid()">+</button>
-        <button id="gridGenerator" onclick="genGrid(gridSize)">Generate!</button>
+    <div id="board">
+        <div id="grid"></div>
     </div>
+    <h3></h3>
+
+
+        </div>
 
     <div id="wheels">
-        <div id="left"> </div>
-        <div id="right"> </div>
+        <div id="left"></div>
+        <div class="controls">
+            <button id="decreaseGrid" onclick="decreaseGrid()">-</button>
+            <button id="gridSize" onclick="genGrid(gridSize)">60</button>
+            <button id="increaseGrid" onclick="increaseGrid()">+</button>
+        </div>
+        <div id="right"></div>
     </div>
 
 
 
 
 </body>
-<footer>    <h4><em>by Mike Sealey</em></h4></footer>
+<footer><h4><em>by Mike Sealey</em></h4></footer>
