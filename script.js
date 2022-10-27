@@ -39,23 +39,20 @@ function genGrid(gridSize){
           cell.classList.add("pixel")
           //cell.innerText = (i * gridSize) + x; // Drops numbers on each "pixel" for testing
           row.appendChild(cell); 
-
       } 
       grid.appendChild(row); 
-      
     } 
-    
+  const pixels = document.getElementsByClassName("pixel");
+  for (const pix of pixels) {
+    pix.addEventListener('mouseover', function onmouseover() {
+    pix.classList.add("drawn")
+  })
+}
 };
 
 genGrid(gridSize); // Calling this here makes a grid ready for the user
 
-const pixels = document.getElementsByClassName("pixel");
 
-for (const pix of pixels) {
-  pix.addEventListener('mouseover', function onclick() {
-    pix.classList.add("drawn")
-  })
-}
 
 
 /*
