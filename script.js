@@ -49,15 +49,13 @@ function genGrid(gridSize){
 
 genGrid(gridSize); // Calling this here makes a grid ready for the user
 
-var item = document.getElementsByClassName("pixel")
-item.addEventListener("mouseenter", hoverDraw)
+const pixels = document.getElementsByClassName("pixel");
 
-function hoverDraw() {
-  console.log("class \"drawn\" added ")
-  cell.classList.add("drawn")
+for (const pix of pixels) {
+  pix.addEventListener('mouseover', function onclick() {
+    pix.classList.add("drawn")
+  })
 }
-
-
 
 
 /*
