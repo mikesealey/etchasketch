@@ -55,6 +55,7 @@ genGrid(gridSize); // Calling this here makes a grid ready for the user
 
 
 
+
 /*
 Closing 19/10/22
 Pixel grid populates directly into body, which isn't ideal

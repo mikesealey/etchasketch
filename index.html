@@ -26,9 +26,21 @@
     <div id="wheels">
         <div id="left"></div>
         <div class="controls">
+            <div ></div>
+            <!--
+                For the time being I have ignore the grid-resize feature.
+                Time is my biggest enemy, and the time spent on the grid-resize
+                has been nearly 50% of the total time worked on this project.
+
+                I expect to come back to this project at a later date and
+                implement it, but until then, here is a fixed-size etchasketch grid.
+            -->
+            <button onclick="genGrid(10)">Min</button>
             <button id="decreaseGrid" onclick="decreaseGrid()">-</button>
             <button id="gridSize" onclick="genGrid(gridSize)">60</button>
             <button id="increaseGrid" onclick="increaseGrid()">+</button>
+            <button onclick="genGrid(60)">Max</button>
+            
         </div>
         <div id="right"></div>
     </div>
